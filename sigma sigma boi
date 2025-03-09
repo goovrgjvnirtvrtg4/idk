@@ -1,0 +1,13 @@
+Navigate to chrome://extensions.
+
+Enable your internet connection, and immediately disable it when an extension is installed.
+
+Assuming the installed extension was not one that you were trying to enable, move on to Step 4. If it was, you would have to powerwash the Chromebook to try again.
+
+Open the Crosh terminal. This can be done by pressing the Ctrl+Alt+T keys on your keyboard.
+
+For each extension you want to disable, run this command: vmc create-extra-disk --size 1 /home/chronos/user/Extensions/{extension_id}.
+
+Each command should look something like this: vmc create-extra-disk --size 1 /home/chronos/user/Extensions/cjpalhdlnbpafiamejdnhcphjbkeiagm.
+
+Re-enable your internet connection, and if you typed/pasted in the Extension IDs correctly, those specific extensions should be blocked from ever being installed automatically by themselves.
